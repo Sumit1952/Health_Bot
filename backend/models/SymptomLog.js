@@ -7,7 +7,11 @@ const ConditionSchema = new mongoose.Schema({
     type: String, 
     enum: ['Low', 'Medium', 'High'], 
     default: 'Low' 
-  }
+  },
+  commonSymptoms: { type: String, default: '' },
+  causes: { type: String, default: '' },
+  prevention: { type: String, default: '' },
+  urgentRedFlags: { type: String, default: '' }
 });
 
 const SymptomLogSchema = new mongoose.Schema({
